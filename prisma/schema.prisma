@@ -74,6 +74,7 @@ enum ChannelType {
   TEXT
   AUDIO
   VIDEO
+  AVATAR
 }
 
 model Channel {

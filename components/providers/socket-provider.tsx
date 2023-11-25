@@ -8,6 +8,9 @@ import {
 } from "react";
 import { io as ClientIO } from "socket.io-client";
 
+
+
+
 type SocketContextType = {
   socket: any | null;
   isConnected: boolean;
@@ -45,6 +48,12 @@ export const SocketProvider = ({
     });
 
     setSocket(socketInstance);
+
+    function onHello() {
+    }
+
+    socketInstance.on("hello", onHello);
+
 
     return () => {
       socketInstance.disconnect();
